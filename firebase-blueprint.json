@@ -1,0 +1,224 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User account information and preferences.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "name": { "type": "string" },
+        "avatar": { "type": "string" },
+        "isOwner": { "type": "boolean" },
+        "joinedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "email"]
+    },
+    "ChatSession": {
+      "title": "Chat Session",
+      "description": "A conversation between a user and the AI.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "messages": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "messages"]
+    },
+    "Quiz": {
+      "title": "Saved Quiz",
+      "description": "A quiz generated for the user.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "questions": { "type": "array" },
+        "date": { "type": "string" }
+      },
+      "required": ["id", "userId", "questions"]
+    },
+    "MindMap": {
+      "title": "Mind Map",
+      "description": "A visual concept map.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "rootTitle": { "type": "string" },
+        "branches": { "type": "array" }
+      },
+      "required": ["id", "userId", "rootTitle", "branches"]
+    },
+    "Note": {
+      "title": "Study Note",
+      "description": "AI generated study material.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "contentMarkdown": { "type": "string" }
+      },
+      "required": ["id", "userId", "contentMarkdown"]
+    },
+    "Evaluation": {
+      "title": "Answer Evaluation",
+      "description": "An AI graded answer report.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "marksObtained": { "type": "number" },
+        "maxMarks": { "type": "number" },
+        "modelAnswer": { "type": "string" }
+      },
+      "required": ["id", "userId", "marksObtained", "maxMarks"]
+    },
+    "ApiKeyStatus": {
+      "title": "API Key Status",
+      "description": "Health status and usage tracking for a Gemini API key.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "status": { "type": "string" },
+        "successCount": { "type": "number" },
+        "errorCount": { "type": "number" }
+      },
+      "required": ["id", "status"]
+    },
+    "Feedback": {
+      "title": "User Feedback",
+      "description": "Support requests and feedback from users.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "message": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "userId", "message"]
+    },
+    "TimerSession": {
+      "title": "Timer Session",
+      "description": "Completed study timer log.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "durationMinutes": { "type": "number" },
+        "completedAt": { "type": "string" },
+        "soundUsed": { "type": "string" }
+      },
+      "required": ["id", "userId", "durationMinutes"]
+    },
+    "YouTubeAnalysis": {
+      "title": "YouTube Analysis",
+      "description": "Saved YouTube video AI analysis and study context.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "videoUrls": { "type": "array" },
+        "videos": { "type": "array" }
+      },
+      "required": ["id", "userId", "title"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "System and broadcast announcements for students.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "title", "message"]
+    },
+    "NotificationHistory": {
+      "title": "Notification History",
+      "description": "Delivery log for sent notifications.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "status": { "type": "string" },
+        "sentAt": { "type": "string" }
+      },
+      "required": ["id", "title", "status"]
+    },
+    "CelebrationBanner": {
+      "title": "Celebration Banner",
+      "description": "Homepage announcement and festival greeting banner.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "mediaType": { "type": "string" },
+        "mediaUrl": { "type": "string" },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["id", "mediaType", "mediaUrl"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles."
+    },
+    "/users/{userId}/chats/{chatId}": {
+      "schema": "ChatSession",
+      "description": "User chat history."
+    },
+    "/users/{userId}/quizzes/{quizId}": {
+      "schema": "Quiz",
+      "description": "Saved quizzes."
+    },
+    "/users/{userId}/mindmaps/{mmId}": {
+      "schema": "MindMap",
+      "description": "Saved mind maps."
+    },
+    "/users/{userId}/notes/{noteId}": {
+      "schema": "Note",
+      "description": "Saved notes."
+    },
+    "/users/{userId}/evaluations/{evId}": {
+      "schema": "Evaluation",
+      "description": "Saved answer evaluations."
+    },
+    "/users/{userId}/timer_sessions/{sessionId}": {
+      "schema": "TimerSession",
+      "description": "Recorded pomodoro timer study sessions."
+    },
+    "/users/{userId}/youtube_analyses/{ytId}": {
+      "schema": "YouTubeAnalysis",
+      "description": "Saved YouTube video AI analyses."
+    },
+    "/api_keys/{keyId}": {
+      "schema": "ApiKeyStatus",
+      "description": "System-wide API key health tracking."
+    },
+    "/feedback/{feedbackId}": {
+      "schema": "Feedback",
+      "description": "User feedback."
+    },
+    "/notifications/{notifId}": {
+      "schema": "Notification",
+      "description": "Active broadcast announcements."
+    },
+    "/notifications_history/{histId}": {
+      "schema": "NotificationHistory",
+      "description": "Historical notification dispatch logs."
+    },
+    "/celebration_banners/{bannerId}": {
+      "schema": "CelebrationBanner",
+      "description": "Homepage celebration and promotional banners."
+    }
+  }
+}

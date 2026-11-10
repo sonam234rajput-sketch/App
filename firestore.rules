@@ -1,0 +1,182 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // --- Helpers ---
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'sonamkumari40411@gmail.com' ||
+        request.auth.token.email == 'sonam234rajput@gmail.com' ||
+        request.auth.token.email == 'rishabhsinghrajput8877@gmail.com'
+      );
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // --- Entity Validators ---
+    function isValidUser(data) {
+      return data.keys().hasAll(['id', 'email']) &&
+             data.id == request.auth.uid &&
+             data.email is string && data.email.size() <= 256;
+    }
+
+    function isValidChatSession(data) {
+      return data.keys().hasAll(['id', 'userId', 'messages']) &&
+             data.userId == request.auth.uid &&
+             data.messages is list && data.messages.size() <= 200;
+    }
+
+    function isValidQuiz(data) {
+      return data.keys().hasAll(['id', 'userId', 'questions']) &&
+             data.userId == request.auth.uid;
+    }
+
+    function isValidMindMap(data) {
+      return data.keys().hasAll(['id', 'userId', 'rootTitle', 'branches']) &&
+             data.userId == request.auth.uid;
+    }
+
+    function isValidNote(data) {
+      return data.keys().hasAll(['id', 'userId', 'contentMarkdown']) &&
+             data.userId == request.auth.uid;
+    }
+
+    function isValidEvaluation(data) {
+      return data.keys().hasAll(['id', 'userId', 'marksObtained', 'maxMarks']) &&
+             data.userId == request.auth.uid;
+    }
+
+    function isValidTimerSession(data) {
+      return data.keys().hasAll(['id', 'userId', 'durationMinutes']) &&
+             data.userId == request.auth.uid;
+    }
+
+    function isValidYouTubeAnalysis(data) {
+      return data.keys().hasAll(['id', 'userId', 'title']) &&
+             data.userId == request.auth.uid;
+    }
+
+    function isValidFeedback(data) {
+      return data.keys().hasAll(['id', 'userId', 'message']) &&
+             data.userId == request.auth.uid &&
+             data.message is string && data.message.size() <= 5000;
+    }
+
+    // --- Match Blocks ---
+
+    match /users/{userId} {
+      allow get: if isOwner(userId) || isAdmin();
+      allow list: if isAdmin();
+      allow create, update: if isOwner(userId) && isValidUser(incoming());
+
+      // Nested subcollections
+      match /chats/{chatId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidChatSession(incoming()) && isValidId(chatId);
+        allow update: if isOwner(userId) && isValidChatSession(incoming()) &&
+                      incoming().diff(existing()).affectedKeys().hasOnly(['messages', 'updatedAt', 'title']);
+        allow delete: if isOwner(userId);
+      }
+
+      match /quizzes/{quizId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidQuiz(incoming()) && isValidId(quizId);
+        allow update: if isOwner(userId) && isValidQuiz(incoming());
+        allow delete: if isOwner(userId);
+      }
+
+      match /mindmaps/{mmId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidMindMap(incoming()) && isValidId(mmId);
+        allow update: if isOwner(userId) && isValidMindMap(incoming());
+        allow delete: if isOwner(userId);
+      }
+
+      match /notes/{noteId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidNote(incoming()) && isValidId(noteId);
+        allow update: if isOwner(userId) && isValidNote(incoming());
+        allow delete: if isOwner(userId);
+      }
+
+      match /evaluations/{evId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidEvaluation(incoming()) && isValidId(evId);
+        allow update: if isOwner(userId) && isValidEvaluation(incoming());
+        allow delete: if isOwner(userId);
+      }
+
+      match /timer_sessions/{sessionId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidTimerSession(incoming()) && isValidId(sessionId);
+        allow update: if isOwner(userId) && isValidTimerSession(incoming());
+        allow delete: if isOwner(userId);
+      }
+
+      match /youtube_analyses/{ytId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidYouTubeAnalysis(incoming()) && isValidId(ytId);
+        allow update: if isOwner(userId) && isValidYouTubeAnalysis(incoming());
+        allow delete: if isOwner(userId);
+      }
+    }
+
+    match /api_keys/{keyId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /feedback/{feedbackId} {
+      allow create: if isSignedIn() && isValidFeedback(incoming());
+      allow get: if isSignedIn() && (existing().userId == request.auth.uid || isAdmin());
+      allow list: if isAdmin();
+      allow update: if isAdmin() && 
+                    incoming().diff(existing()).affectedKeys().hasOnly(['status', 'response']);
+    }
+
+    match /notifications/{notifId} {
+      allow get: if isSignedIn() && (existing().userId == request.auth.uid || existing().userId == 'broadcast' || isAdmin());
+      allow list: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    match /notifications_history/{histId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /celebration_banners/{bannerId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /banners/{bannerId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /user_private_api_keys/{userId} {
+      allow read, write: if isOwner(userId) || isAdmin();
+    }
+  }
+}

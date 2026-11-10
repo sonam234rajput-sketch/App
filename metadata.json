@@ -1,0 +1,6 @@
+{
+  "name": "AarohAI",
+  "description": "Learn Smart. Prepare Better. Rise Higher. AI-powered educational platform with quiz generator, mind maps, answer checker, notes, and study timer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

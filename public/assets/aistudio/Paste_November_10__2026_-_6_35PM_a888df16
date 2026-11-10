@@ -1,0 +1,1223 @@
+AAROH AI – COMPLETE WEBSITE UPGRADE, PREMIUM SUBSCRIPTION, PAYMENT, SCHOLARSHIP, OWNER CONTROL, SECURITY & NOTIFICATION SYSTEM
+
+MASTER IMPLEMENTATION PROMPT FOR GOOGLE AI STUDIO
+
+You are working on my existing educational AI website called AarohAI.
+
+I do NOT want a new website. I do NOT want a redesigned replacement project. I want you to carefully upgrade my existing, fully developed website by integrating a complete Premium Subscription System, Payment Verification System, Scholarship System, Owner Dashboard Upgrades, Coupon Management, Global Notification System, Promotional Banner System, Automatic AI API Failover, Advanced Account Security, and all required backend functionality.
+
+IMPORTANT: Implement the complete requested upgrade in this single task. Do not divide the project into separate prompts or ask me to return for another implementation prompt.
+
+Do not stop after creating a design, proposal, plan, or demonstration. Inspect the existing project, implement the requested functionality, connect frontend and backend, and test the complete system.
+
+---
+
+PART 1 – MOST IMPORTANT PROJECT PRESERVATION RULES
+
+My AarohAI website is already developed.
+
+It already contains working features, authentication, an Owner Page, a Support System, an API integration system, and an existing website design.
+
+Your first responsibility is to protect the existing project.
+
+Before changing anything:
+
+1. Inspect the complete existing source code.
+2. Understand the existing frontend framework and backend architecture.
+3. Identify the existing authentication system.
+4. Identify the existing database and storage.
+5. Identify the existing Owner Page and its authorization mechanism.
+6. Identify the existing Support System.
+7. Identify all existing AI features and their API integrations.
+8. Identify the current API key switching mechanism.
+9. Identify existing routes, components, styles, and database structures.
+10. Create a recoverable backup or safe version-control checkpoint before modifying files.
+
+Strict instructions
+
+- Do not create a replacement website.
+- Do not delete existing components.
+- Do not remove existing features.
+- Do not unnecessarily change the existing design.
+- Do not replace the authentication system.
+- Do not replace the existing Owner Gmail.
+- Do not remove existing Owner permissions.
+- Do not destroy existing Firebase configuration if Firebase is already used.
+- Do not overwrite existing user data.
+- Do not replace working API integrations without a technical reason.
+- Do not create duplicate Owner Pages.
+- Do not introduce dummy payment functionality.
+- Do not create buttons that look functional but do nothing.
+- Do not expose secret API keys in frontend code.
+
+Reuse the existing architecture wherever possible.
+
+If a new database collection, backend function, component, or security rule is necessary, add it without damaging the existing system.
+
+If an unexpected conflict or destructive migration is detected, stop that specific operation, preserve the existing project, and report the problem instead of deleting existing data.
+
+PART 2 – EXISTING EIGHT AI FEATURES MUST REMAIN WORKING
+
+All existing features must remain available to subscribed users.
+
+1. AI Chat
+
+Preserve the existing AI Chat system.
+
+It must support:
+
+- General AI conversations.
+- Question solving.
+- Educational explanations.
+- General Knowledge.
+- Current information and research where supported.
+- Detailed answers in easy language.
+- Student learning assistance.
+
+2. AI Mind Map Generator
+
+Preserve the existing Mind Map Generator.
+
+Students should be able to:
+
+- Enter a chapter name.
+- Enter their class.
+- Upload a photograph.
+- Upload a PDF.
+- Upload a supported video.
+- Generate detailed mind maps using AI.
+- Create organized study material.
+- Prepare chapters quickly.
+
+3. Quiz Generator
+
+Preserve the existing Quiz Generator.
+
+- Generate quizzes using AI.
+- Use chapter names, notes, mind maps, and supported uploaded material.
+- Generate multiple questions.
+- Provide answers and explanations.
+- Support repeated quiz generation.
+- Do not introduce artificial subscription-based generation quotas.
+
+4. Notes Generator
+
+Preserve the existing Notes Generator.
+
+- Easy-language notes.
+- Detailed explanations.
+- Important definitions.
+- Chapter-wise notes.
+- Examination preparation.
+- Structured and readable output.
+
+5. Answer Checker
+
+Preserve the existing Answer Checker.
+
+Students should be able to submit an answer and receive:
+
+- Marks or estimated marks.
+- Correctness evaluation.
+- Mistakes and missing points.
+- Suggestions for improvement.
+- Better definitions.
+- Improved answer-writing formats.
+- Examination-oriented presentation.
+- Vocabulary and wording improvements.
+- Handwriting feedback when a suitable image is uploaded.
+- Suggestions for writing better answers.
+
+6. Study Timer
+
+Preserve the complete Timer system.
+
+- Focus timer.
+- Background timer.
+- Custom ringtone selection.
+- Available ringtone library.
+- Persistent timing behavior where technically supported.
+- Proper pause, resume, and reset functions.
+
+7. Study Analytics
+
+Preserve the existing analytics dashboard.
+
+Track:
+
+- Study time.
+- Quiz activity.
+- Notes generated.
+- Mind maps generated.
+- Learning activity.
+- Relevant personal progress statistics.
+
+Each student must only see their own analytics.
+
+8. YouTube Learning Generator
+
+Preserve the existing YouTube Generator.
+
+Students should be able to:
+
+1. Paste a YouTube link.
+2. Submit multiple supported links.
+3. Select AI Chat, Mind Map, or Notes.
+4. Process the supported video content.
+5. Generate study material.
+6. Ask questions about the video.
+7. Receive detailed explanations of available video content.
+
+Do not break existing YouTube processing integrations.
+
+---
+
+PART 3 – COMPLETE PREMIUM SUBSCRIPTION SYSTEM
+
+Make the entire website publicly viewable but restrict all functional educational tools to active Premium members.
+
+Visitor access without Premium
+
+A visitor who has not purchased Premium can:
+
+- Open the website.
+- View the Home Page.
+- View all eight feature descriptions.
+- Read the About section.
+- View available pricing.
+- View promotional banners.
+- Visit the subscription page.
+- Visit the Support section.
+- Register or log in.
+
+However, a non-Premium user must not be able to:
+
+- Generate AI content.
+- Use AI Chat.
+- Generate Mind Maps.
+- Generate Quizzes.
+- Generate Notes.
+- Check answers.
+- Use restricted Premium tools.
+- Access another user's protected content.
+- Call protected AI backend endpoints.
+
+Show a clear and attractive Premium subscription message when an unauthorized visitor attempts to use a restricted feature.
+
+Subscription pricing
+
+Implement these exact initial prices:
+
+Plan| Price| Validity
+Monthly Premium| ₹29| 1 month
+Yearly Premium| ₹199| 1 year
+Lifetime Premium| ₹99| Lifetime
+
+The Owner must be able to change all three prices from the existing Owner Page.
+
+Prices must come from a trusted backend configuration, not from editable browser values.
+
+The Lifetime plan must not expire.
+
+Do not introduce artificial per-plan AI generation limits. The intention is to offer unlimited access to the existing AI features. Technical security and abuse protection may still be applied without silently introducing subscription quotas.
+
+Automatic subscription activation
+
+After a payment is verified and approved:
+
+- Activate the correct Premium plan.
+- Save the purchase date.
+- Save the activation date.
+- Calculate the expiry date.
+- Update the user's subscription status.
+- Notify the student.
+- Make all authorized Premium tools available.
+
+Automatic subscription expiry
+
+This is mandatory.
+
+Monthly:
+
+- Automatically expire after one calendar month.
+
+Yearly:
+
+- Automatically expire after one calendar year.
+
+Lifetime:
+
+- Never expire.
+
+Scholarship:
+
+- Expire according to the duration granted by the Owner.
+
+When a subscription expires:
+
+- Change its status to Expired.
+- Revoke Premium access.
+- Return the student to Free Preview Mode.
+- Preserve their account.
+- Preserve their existing study history and personal data.
+- Notify the student.
+
+Use secure server-side date calculations and a reliable scheduled backend mechanism where supported. Also validate subscription expiry during authorization checks. Do not depend only on the student opening the website.
+
+Do not automatically charge a student again unless a separately configured and explicitly authorized recurring payment system exists.
+
+Allow students to renew manually.
+
+PART 4 – COMPLETE PAYMENT SYSTEM USING QR CODE
+
+Implement a secure payment workflow.
+
+Payment page
+
+Show:
+
+- Selected subscription plan.
+- Correct price.
+- Available coupon field.
+- Final payable amount.
+- Payment instructions.
+- Current QR Code.
+- Student information form.
+
+Mandatory student information
+
+Before submitting a payment request, collect:
+
+1. Full Name.
+2. Mobile Number.
+3. Gmail Address.
+4. Selected Subscription Plan.
+5. Final Payable Amount.
+
+Automatically associate the request with the authenticated user's account.
+
+QR Code management
+
+The existing Owner Page must receive a QR management section.
+
+Owner can:
+
+- Upload a new QR Code image.
+- Select an image from the phone gallery.
+- Select a file from device storage.
+- Preview the uploaded image.
+- Replace the previous QR Code.
+- Remove the QR Code.
+- Save the new QR Code.
+
+The latest active QR Code must appear on the payment page.
+
+If no QR Code is configured, show a proper payment-unavailable message rather than displaying a broken image.
+
+Payment verification workflow
+
+The payment process must be:
+
+1. Student selects a plan.
+2. Student enters the required information.
+3. Backend calculates the actual payable amount.
+4. Student scans the displayed QR Code.
+5. Student transfers the payment.
+6. Student submits the payment request.
+7. System generates a unique Payment Request ID.
+8. Request status becomes Pending Verification.
+9. Owner checks the actual incoming transaction in their bank or Google Pay records.
+10. Owner verifies the real received amount and transaction.
+11. Owner approves or rejects the payment.
+12. On approval, Premium activates automatically.
+
+Critical payment security
+
+Never trust only:
+
+- A submitted UTR number.
+- A transaction screenshot.
+- An uploaded receipt.
+- A user-entered amount.
+- A browser-side payment status.
+
+A fake UTR must never activate Premium.
+
+A student selecting ₹199 must not be able to pay ₹1 and obtain a ₹199 subscription.
+
+The amount must be calculated and verified server-side.
+
+For example:
+
+Selected plan: ₹199.
+
+Actual received amount: ₹1.
+
+Result: Payment remains unverified. Premium must not activate.
+
+Where a genuine payment gateway or reliable payment verification integration is available, support verified server-side webhooks. Otherwise, retain the manual verification workflow described above.
+
+Do not claim that an ordinary QR image automatically verifies bank credits.
+
+Payment waiting message
+
+After submitting the payment request, show:
+
+"Your payment request has been submitted successfully.
+
+Your payment is currently waiting for verification.
+
+Premium activation may take up to 12–24 hours.
+
+Once your payment is verified, your Premium access will be activated and you will receive a notification.
+
+Thank you for choosing AarohAI."
+
+If verification is completed earlier, activate access immediately.
+
+Owner payment dashboard
+
+Display:
+
+- Student Name.
+- Gmail.
+- Mobile Number.
+- Selected Plan.
+- Expected Amount.
+- Payment Request ID.
+- Submitted Date and Time.
+- Payment Status.
+- Verification Status.
+- Activation Status.
+
+Provide secure actions:
+
+- View Payment Request.
+- Approve Payment.
+- Reject Payment.
+- View History.
+
+Every approval or rejection must be recorded in an audit log.
+
+Do not let the student change the selected plan or expected payment amount after creating the payment request.
+
+PART 5 – COMPLETE OWNER DASHBOARD UPGRADES
+
+IMPORTANT: My Owner Page already exists.
+
+My Owner Gmail authentication is already configured.
+
+Do not create a new Owner Page or replace the existing Owner Gmail authentication.
+
+Add the following sections inside the existing Owner Dashboard.
+
+A. Dynamic Pricing Management
+
+Owner can edit:
+
+- Monthly price.
+- Yearly price.
+- Lifetime price.
+
+When a new price is saved, the website pricing page must update automatically.
+
+Existing subscriptions must retain their original purchase terms.
+
+B. Premium User Management
+
+Owner can:
+
+- View all Premium users.
+- Search by Gmail.
+- Search by name.
+- View plan type.
+- View activation date.
+- View expiry date.
+- View subscription status.
+- Revoke access when appropriate.
+- Grant access manually.
+- Extend a subscription.
+- View subscription history.
+
+C. Manual Premium Grant System
+
+This is very important.
+
+I want to grant Premium access to any registered student through the existing Owner Dashboard.
+
+Required process:
+
+1. Enter the student's Gmail.
+2. Find the corresponding registered account.
+3. Verify the correct account.
+4. Select Monthly, Yearly, or Lifetime.
+5. Set the duration if necessary.
+6. Select the reason for access.
+7. Click Grant Premium.
+8. Activate Premium securely.
+
+Possible reasons:
+
+- Scholarship.
+- Special Student Support.
+- Promotional Access.
+- Compensation.
+- Owner Granted Access.
+
+This feature must not require editing source code for every student.
+
+Only the authorized Owner may use this facility.
+
+Every manual grant must be recorded with its reason, date, duration, and granting administrator.
+
+PART 6 – SCHOLARSHIP SYSTEM FOR POOR STUDENTS
+
+This feature is extremely important to me.
+
+I come from a financially ordinary family, and I want students who cannot afford Premium to have an opportunity to study.
+
+Create a Scholarship Request System.
+
+Scholarship application form
+
+Collect the following information:
+
+1. Student Full Name.
+2. Mobile Number.
+3. Gmail Address.
+4. Class or Education Level.
+5. Reason for requesting Scholarship.
+6. Financial difficulty details.
+7. Preferred Scholarship duration.
+8. Any additional supporting information.
+
+Collect only information necessary for evaluating the application. If documents are optional, clearly explain why they are requested and protect uploaded documents.
+
+Scholarship process
+
+1. Student opens the Scholarship section.
+2. Student submits their information.
+3. The application receives a unique Scholarship Request ID.
+4. Application status becomes Pending.
+5. The complete application is stored securely.
+6. The application appears directly in my existing Owner Dashboard.
+7. Owner receives a notification about the new request.
+8. Owner reviews the information.
+9. Owner can approve or reject the request.
+10. If approved, Owner chooses the Premium duration.
+11. Premium activates automatically.
+12. Student receives an approval notification.
+
+Scholarship Owner controls
+
+Owner must be able to:
+
+- View all applications.
+- Search applications.
+- View Name.
+- View Gmail.
+- View Mobile Number.
+- View Class.
+- View financial difficulty details.
+- View requested duration.
+- Approve.
+- Reject.
+- Grant Monthly access.
+- Grant Yearly access.
+- Grant Lifetime access.
+- Grant a custom duration.
+- Add an internal note.
+- View previous Scholarship history.
+
+A Scholarship must never be automatically granted merely because a form was submitted.
+
+Final approval belongs to the Owner.
+
+A Scholarship student must receive the same authorized Premium features as a paying Premium student.
+
+Scholarship access must also follow its assigned expiry date unless Lifetime is granted.
+
+Protect scholarship applicants' personal and financial information.
+
+PART 7 – SUPPORT SYSTEM INTEGRATION
+
+My existing Support Team / Help Support system is already developed.
+
+Do not replace it.
+
+Integrate subscription and scholarship assistance into it.
+
+Payment support
+
+When a student contacts Support about a payment problem, collect:
+
+- Name.
+- Gmail.
+- Mobile Number.
+- Payment Request ID, if available.
+- Selected Plan.
+- Description of the problem.
+
+Show this information in the Owner's Support Dashboard.
+
+Support-based Premium grant
+
+I also want an Owner-only facility to grant Premium to a student through their Gmail.
+
+Process:
+
+1. Owner opens the Support conversation.
+2. Owner copies the student's Gmail.
+3. Owner opens the authorized Premium Grant action.
+4. System finds the actual registered account.
+5. Owner selects the plan and duration.
+6. Owner grants access.
+7. Student receives a notification.
+
+Do not allow an ordinary support user to grant Premium unless I explicitly authorize that permission.
+
+Keep the existing support conversation and message history safe.
+
+PART 8 – COUPON CODE MANAGEMENT
+
+Add a complete Coupon Management section to the existing Owner Dashboard.
+
+Owner must be able to:
+
+- Create Coupon.
+- Edit Coupon.
+- Delete or deactivate Coupon.
+- Select applicable plan.
+- Set discount.
+- Set final price or discount percentage.
+- Set expiry date.
+- Set usage limit.
+- Set per-user usage limit.
+- Enable or disable Coupon.
+
+Example Coupon Code:
+
+205
+
+The actual discount must be defined by the Owner.
+
+Coupon validation
+
+- Validate coupon on the backend.
+- Check expiry.
+- Check usage limit.
+- Check applicable plan.
+- Prevent unauthorized price modification.
+- Prevent repeated use beyond the configured limit.
+- Record coupon usage.
+
+The final payment amount must be calculated by the server.
+
+If the coupon is invalid, show a clear error.
+
+If valid, show the actual discounted amount before payment.
+
+PART 9 – SPECIAL OFFER MANAGEMENT
+
+Owner can create offers whenever desired.
+
+Examples:
+
+- Diwali Special Offer.
+- New Year Special Offer.
+- Student Special Offer.
+- Limited Time Offer.
+- Special Scholarship Announcement.
+
+Owner can:
+
+- Create an offer.
+- Set offer title.
+- Add description.
+- Select applicable plans.
+- Set discounted prices or coupon.
+- Set starting date.
+- Set ending date.
+- Upload promotional media.
+- Enable or disable the offer.
+
+The active offer should appear on the relevant website sections.
+
+Do not display expired or disabled offers.
+
+PART 10 – GLOBAL NOTIFICATION SYSTEM
+
+Create two different notification systems:
+
+A. Automatic user notifications.
+
+B. Owner-created broadcast notifications.
+
+A. Automatic Notifications
+
+Notify students about:
+
+- Payment submitted.
+- Payment pending.
+- Payment approved.
+- Payment rejected.
+- Premium activated.
+- Subscription expiring soon.
+- Subscription expired.
+- Scholarship submitted.
+- Scholarship approved.
+- Scholarship rejected.
+- Support response.
+- Important account security events.
+- Special offers.
+
+Expiry reminders
+
+Support configurable reminders, initially:
+
+- 7 days before expiry.
+- 3 days before expiry.
+- 1 day before expiry.
+
+Avoid sending duplicate reminders for the same event.
+
+B. Owner Global Broadcast Notifications
+
+This feature is mandatory.
+
+Inside the existing Owner Dashboard, create a Broadcast Notification section.
+
+Owner can type their own notification.
+
+Fields:
+
+- Notification Title.
+- Notification Message.
+- Target Audience.
+- Optional notification link.
+- Optional expiry date.
+
+Target audiences:
+
+- All registered users.
+- Premium users.
+- Free users.
+- Scholarship users.
+
+The Owner clicks Send.
+
+The notification must be delivered to the selected users.
+
+The notification should appear inside their website Notification Bell.
+
+Where users have granted permission, support Browser Push Notifications.
+
+In the future, the same notification backend should support Android App Push Notifications.
+
+Notification management
+
+- Read and unread status.
+- Notification history.
+- Delivery status where available.
+- Delete or archive old notifications.
+- Mark as read.
+- Avoid duplicate broadcasts.
+
+Do not require notification permission just to use the website.
+
+A user who denies browser notifications must still receive in-site notifications.
+
+PART 11 – HOMEPAGE PROMOTIONAL PHOTO / VIDEO BANNER
+
+Add a Home Page Promotional Banner Management section to the existing Owner Dashboard.
+
+I want to upload promotional photographs and videos whenever I run an offer.
+
+Owner controls
+
+- Upload Photo.
+- Upload Video.
+- Select from mobile gallery.
+- Select from device files.
+- Preview media.
+- Change media.
+- Remove media.
+- Add banner title.
+- Add description.
+- Add optional offer link.
+- Set start date.
+- Set end date.
+- Enable or disable banner.
+
+Use secure storage and suitable file-type and size validation.
+
+Homepage behavior
+
+When the Owner uploads and activates a promotional banner:
+
+- Display it on the Home Page.
+- Display the uploaded photograph or video correctly.
+- Support mobile and desktop layouts.
+- Make it responsive.
+- Allow the Owner to change it at any time.
+
+If no promotional image or video has been uploaded or activated:
+
+- Do not show an empty banner.
+- Do not display a broken image.
+- Do not leave unnecessary blank space.
+- Keep the original Home Page design intact.
+
+The banner should appear only when configured and active.
+
+PART 12 – AUTOMATIC AI API KEY AND PROVIDER FAILOVER
+
+My existing project already has multiple API keys and AI providers connected.
+
+The system currently requires me to switch manually when a key reaches its limit or encounters an error.
+
+I do NOT want a replacement AI system.
+
+I want the existing system improved.
+
+Required behavior
+
+Suppose I have multiple API keys:
+
+API 1 → API 2 → API 3 → API 4 → API 5.
+
+If API 1 fails or reaches its quota:
+
+- Automatically identify the failure.
+- Mark the key temporarily unavailable when appropriate.
+- Activate the next available key.
+- Continue processing the request safely.
+
+If API 2 fails, move to API 3.
+
+Continue until an available compatible provider is found.
+
+Failover requirements
+
+Handle:
+
+- Quota exhaustion.
+- Rate limits.
+- Temporary provider outages.
+- Authentication failures.
+- Network failures.
+- Timeout errors.
+- Provider-specific errors.
+
+Additional requirements:
+
+- No manual switching.
+- No unnecessary duplicate requests.
+- Safe retry logic.
+- Exponential backoff where appropriate.
+- Provider health tracking.
+- Recovery of temporarily unavailable keys.
+- Secure server-side API key storage.
+- Error logging without exposing secrets.
+- Preserve existing model and provider configurations.
+
+Do not retry a failed payment-related or other non-idempotent action in a way that causes duplicate operations.
+
+If all configured AI providers fail, show a clear temporary service error.
+
+Never expose API keys in browser JavaScript, HTML, network responses, or user-facing logs.
+
+PART 13 – ADVANCED ACCOUNT AND DEVICE SECURITY
+
+My existing Gmail Login system must remain.
+
+I want to make it more secure.
+
+Account protection
+
+- Users must authenticate before accessing private tools.
+- Each user's data must be associated with their authenticated account.
+- One user's private information must never be visible to another user.
+- Prevent unauthorized account access.
+- Use secure session management.
+- Provide logout functionality.
+- Revoke old sessions when necessary.
+
+Device registration
+
+I want an account to be usable only on its authorized registered device at a time.
+
+Implement:
+
+- Secure device registration.
+- A maximum of one active authorized device per account by default.
+- Additional verification when logging in from a new device.
+- A secure method to replace an old device.
+- Owner-controlled session revocation.
+- Notifications about new device login.
+- Protection against simultaneous unauthorized sessions.
+
+Do not rely only on browser fingerprinting as proof of identity.
+
+Use proper authenticated sessions and server-side device registration.
+
+If a student loses their phone or changes their device, provide a secure recovery process using verified account ownership.
+
+Do not accidentally lock genuine users out permanently.
+
+Private user information
+
+The following data must remain private:
+
+- AI Chat history.
+- Mind Maps.
+- Notes.
+- Quizzes.
+- Answer Checker submissions.
+- Uploaded images.
+- Uploaded PDFs.
+- Uploaded videos.
+- Study Timer information.
+- Study Analytics.
+- Personal profile information.
+- Payment information.
+- Scholarship information.
+- Support conversations.
+
+Only the authenticated owner of the relevant account should access that account's private content, subject to authorized administrative access.
+
+Database security
+
+Use secure authorization rules for every protected resource.
+
+Never trust a user ID, Gmail address, plan, price, or permission supplied only by the browser.
+
+Validate all important actions on the backend.
+
+An ordinary user must never be able to grant themselves Premium by changing frontend code, database requests, or browser values.
+
+PART 14 – FUTURE ANDROID APPLICATION COMPATIBILITY
+
+Currently, I have a website. I do not have an existing Android application that needs rebuilding.
+
+However, I may convert AarohAI into an Android App in the future.
+
+Therefore:
+
+- Keep subscription logic reusable.
+- Keep backend APIs properly structured.
+- Keep authentication compatible with future mobile integration.
+- Keep notifications ready for future app push integration.
+- Keep payment and scholarship records independent of the frontend.
+- Keep user data structured and portable.
+- Avoid unnecessary browser-only dependencies in critical business logic.
+
+Do not create an unnecessary new Android application now.
+
+Focus on upgrading the existing website.
+
+PART 15 – DATABASE AND BACKEND REQUIREMENTS
+
+Inspect the existing database first.
+
+Reuse the current database and storage architecture wherever possible.
+
+Create or extend the necessary data structures for:
+
+1. Subscription Plans.
+2. User Subscriptions.
+3. Payment Requests.
+4. Payment Verification Records.
+5. Coupon Codes.
+6. Coupon Usage.
+7. Special Offers.
+8. Scholarship Applications.
+9. Premium Access Grants.
+10. Notification Records.
+11. Broadcast Notifications.
+12. Promotional Banners.
+13. User Device Registrations.
+14. User Sessions.
+15. API Provider Health.
+16. API Failover Logs.
+17. Owner Audit Logs.
+
+Use proper relationships and unique identifiers.
+
+All sensitive operations must be performed through trusted backend functions.
+
+Use transactions or equivalent consistency protections when activating Premium, recording payments, applying coupons, or granting scholarships.
+
+Avoid duplicate subscriptions caused by repeated button clicks or network retries.
+
+Keep existing database data safe.
+
+PART 16 – OWNER DASHBOARD DESIGN
+
+Preserve the existing Owner Dashboard's visual identity.
+
+Organize the new functionality into clear sections:
+
+1. Overview Dashboard.
+2. Subscription Management.
+3. Pricing Management.
+4. Payment Requests.
+5. Premium Users.
+6. Manual Premium Grant.
+7. Scholarship Applications.
+8. Coupon Management.
+9. Special Offers.
+10. QR Code Management.
+11. Notification Broadcast.
+12. Notification History.
+13. Homepage Banner Management.
+14. Support Management.
+15. Device and Session Management.
+16. API Provider Health.
+17. API Failover Logs.
+18. Owner Activity Logs.
+
+The Overview Dashboard should show useful statistics:
+
+- Total registered users.
+- Total Premium users.
+- Active Monthly subscriptions.
+- Active Yearly subscriptions.
+- Lifetime users.
+- Scholarship users.
+- Pending payments.
+- Approved payments.
+- Rejected payments.
+- Total verified payment revenue.
+- Pending scholarship applications.
+- Active coupons.
+- Active offers.
+
+Make the dashboard responsive and easy to use on mobile.
+
+Do not expose confidential information unnecessarily.
+
+PART 17 – DESIGN AND USER EXPERIENCE
+
+Preserve the existing AarohAI branding, layout, colors, typography, navigation, and identity.
+
+Upgrade the design only where necessary.
+
+The interface must be:
+
+- Modern.
+- Premium-looking.
+- Responsive.
+- Mobile-friendly.
+- Easy to understand.
+- Fast-loading.
+- Consistent.
+- Accessible.
+
+Create polished pages for:
+
+- Subscription Plans.
+- Payment.
+- Payment Pending.
+- Payment Success.
+- Payment Failure.
+- Scholarship Application.
+- Scholarship Status.
+- User Notifications.
+- Subscription Details.
+
+Use clear messages and loading indicators.
+
+Do not create non-functional demonstration buttons.
+
+All forms must validate their inputs.
+
+Show proper error and success messages.
+
+PART 18 – TESTING AND SECURITY VERIFICATION
+
+Do not consider the project complete merely because the pages look correct.
+
+Test the complete functionality.
+
+Subscription tests
+
+- Monthly activates correctly.
+- Monthly expires after one calendar month.
+- Yearly activates correctly.
+- Yearly expires after one calendar year.
+- Lifetime never expires.
+- Scholarship expiry works.
+- Expired users lose access.
+- Renewals work correctly.
+
+Payment tests
+
+- Correct amount.
+- Incorrect amount.
+- Fake UTR.
+- Repeated submission.
+- Duplicate approval.
+- Rejected payment.
+- Expired payment request.
+- Coupon-adjusted payment.
+- QR replacement.
+
+Scholarship tests
+
+- Form submission.
+- Owner receives application.
+- Correct student details.
+- Approval.
+- Rejection.
+- Custom duration.
+- Automatic expiry.
+- Unauthorized approval attempts.
+
+Owner security tests
+
+- Correct Owner Gmail works.
+- Unauthorized Gmail cannot access Owner Page.
+- Ordinary students cannot grant Premium.
+- Ordinary support users cannot approve payments.
+- Unauthorized users cannot edit prices.
+- Unauthorized users cannot create coupons.
+- Unauthorized users cannot broadcast notifications.
+
+User privacy tests
+
+- Student A cannot read Student B's AI Chat.
+- Student A cannot read Student B's Notes.
+- Student A cannot access Student B's files.
+- Student A cannot access Student B's payment information.
+- Student A cannot view Student B's scholarship application.
+- Student A cannot change another student's subscription.
+
+API tests
+
+- First API failure.
+- Second API activation.
+- Quota exhaustion.
+- Rate limit.
+- Provider recovery.
+- All providers unavailable.
+- No API key leakage.
+
+Notification tests
+
+- Automatic payment notification.
+- Expiry notification.
+- Scholarship notification.
+- Owner broadcast.
+- Read/unread status.
+- Browser notification permission.
+- No duplicate notifications.
+
+Banner tests
+
+- Image upload.
+- Video upload.
+- Replace image.
+- Replace video.
+- Remove media.
+- No banner configured.
+- Expired banner.
+- Mobile display.
+
+PART 19 – PERFORMANCE, BACKUP AND RECOVERY
+
+Before deployment:
+
+- Verify all existing pages.
+- Verify existing authentication.
+- Verify existing AI features.
+- Verify existing Owner Page.
+- Verify existing Support System.
+- Verify all database rules.
+- Verify storage permissions.
+- Verify backend functions.
+- Verify mobile responsiveness.
+- Verify error handling.
+
+Avoid unnecessary dependencies.
+
+Do not introduce insecure configuration.
+
+Keep development and production configuration separate.
+
+Do not expose secret keys in client bundles.
+
+Create clear recovery instructions.
+
+If a migration fails, do not partially destroy existing data.
+
+Preserve the last working version.
+
+PART 20 – FINAL IMPLEMENTATION INSTRUCTIONS
+
+This is my complete requirement.
+
+I want the entire AarohAI upgrade completed through this single Master Prompt.
+
+Do not ask me to provide separate prompts for each feature.
+
+Do not first create only the design and ask me to return for backend implementation.
+
+Do not implement only the frontend while leaving the backend disconnected.
+
+Do not create fake or sample functionality in place of real functionality.
+
+Implement all requested frontend, backend, database, authentication, subscription, payment, scholarship, notification, coupon, banner, API failover, and security functionality in the existing project.
+
+You may internally follow a safe implementation order, but all requested work must belong to this single implementation task.
+
+If some functionality requires an external service, payment gateway, Firebase configuration, credentials, or deployment permissions that are not currently available, implement the supported integration structure and clearly identify the exact missing configuration. Never pretend that an unconfigured integration is working.
+
+Do not invent credentials, payment confirmations, or successful deployment results.
+
+After completing the work, provide a final report containing:
+
+1. What was successfully implemented.
+2. What existing functionality was preserved.
+3. What database changes were made.
+4. What security protections were added.
+5. What tests passed.
+6. What tests failed.
+7. What external configuration remains necessary.
+8. Any deployment steps that genuinely require my action.
+
+Do not delete or damage my existing website to force completion.
+
+MY FINAL EXPECTATION
+
+AarohAI should become a complete, professional educational AI platform with:
+
+- All eight existing AI features working.
+- ₹29 Monthly Premium.
+- ₹199 Yearly Premium.
+- ₹99 Lifetime Premium.
+- Automatic subscription activation.
+- Automatic subscription expiry.
+- Secure QR-based payment workflow.
+- Owner payment verification.
+- Dynamic pricing.
+- Coupon management.
+- Special offers.
+- Scholarship applications.
+- Free Premium grants for deserving students.
+- Owner-controlled Premium approval.
+- Existing Support System integration.
+- Automatic API key and provider switching.
+- Automatic user notifications.
+- Owner global broadcast notifications.
+- Home Page promotional image and video management.
+- Gmail and device security.
+- Private user data.
+- Future Android App compatibility.
+- A secure, mobile-friendly Owner Dashboard.
+
+My main goal is to make high-quality education affordable for students, including poor students who cannot afford a subscription.
+
+Please treat this as a serious existing production project. Preserve everything that already works, implement the requested upgrades carefully, and deliver the complete working result.
+
+ONE PROJECT. ONE MASTER PROMPT. COMPLETE IMPLEMENTATION. NO UNNECESSARY REBUILD.
